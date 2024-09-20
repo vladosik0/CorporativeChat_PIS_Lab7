@@ -38,13 +38,13 @@ fun UsernameScreen(
                 value = viewModel.usernameText.value,
                 onValueChange = viewModel::onUsernameChange,
                 placeholder = {
-                    Text(text = "Уведіть ім'я користувача...")
+                    Text(text = "Input username...")
                 },
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(8.dp))
             Button(onClick=viewModel::onJoinClick){
-                Text(text="Приєднатися до чату")
+                Text(text="Join")
             }
         }
     }

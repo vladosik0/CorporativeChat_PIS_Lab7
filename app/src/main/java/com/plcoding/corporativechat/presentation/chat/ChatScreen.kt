@@ -20,7 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
@@ -140,12 +139,12 @@ fun ChatScreen(
                 value = viewModel.messageText.value,
                 onValueChange = viewModel::onMessageChange,
                 placeholder = {
-                    Text(text = "Напишіть повідомлення...")
+                    Text(text = "Message...")
                 },
                 modifier = Modifier.weight(1f)
             )
             IconButton(onClick = viewModel::sendMessage) {
-                Icon(imageVector = Icons.Default.Send, contentDescription = "Відправити")
+                Icon(imageVector = Icons.Default.Send, contentDescription = "Send")
             }
         }
     }
